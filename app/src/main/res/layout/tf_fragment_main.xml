@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color_background">
+
+    <ProgressBar
+        android:id="@+id/progress_bar_tf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="30dp"
+        android:indeterminate="true"
+        android:background="#FFF"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/final_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End of game....Have a nice day!"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        android:textColor="#FFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/main_parent_tf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView_question_tf"
+            android:layout_width="317dp"
+            android:layout_height="150dp"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="italic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_scoreText"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            tools:text="My question"
+            android:textColor="#FFFF"
+            android:background="@drawable/gradient_color"
+            android:scrollbars="vertical"/>
+
+        <TextView
+            android:id="@+id/textView_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/textView_question_tf"
+            app:layout_constraintStart_toEndOf="@id/textView_scoreText"
+            app:layout_constraintBottom_toTopOf="@id/textView_question_tf"
+            android:padding="15dp"
+            android:textColor="#FFF"
+            android:textSize="16dp"/>
+
+
+        <TextView
+            android:id="@+id/textView_scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score : "
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/textView_question_tf"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="30dp"
+            android:padding="15dp"
+            android:textColor="#FFF"
+            android:textSize="16dp"/>
+
+        <Button
+            android:id="@+id/button_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="20dp"
+            android:text="True"
+            android:textColor="#FFFF"
+            android:background="@drawable/gradient_color"
+            app:layout_constraintStart_toStartOf="@id/textView_question_tf"
+            app:layout_constraintTop_toBottomOf="@+id/textView_question_tf" />
+
+        <Button
+            android:id="@+id/button_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="20dp"
+            android:text="False"
+            android:textColor="#FFFF"
+            android:background="@drawable/gradient_color"
+            app:layout_constraintEnd_toEndOf="@id/textView_question_tf"
+            app:layout_constraintTop_toBottomOf="@+id/textView_question_tf" />
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/button_backhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:padding="20dp"
+        android:text="Home"
+        android:textColor="#FFFF"
+        android:background="@drawable/gradient_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible"/>
+
+
+</android.support.constraint.ConstraintLayout>
